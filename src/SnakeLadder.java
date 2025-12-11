@@ -18,6 +18,9 @@ public class SnakeLadder {
             else if (option == 2)
             {
                 startPosition += dice;
+                if (startPosition>100){
+                    startPosition-=dice;
+                }
             }
 
             else if (option == 3) {
