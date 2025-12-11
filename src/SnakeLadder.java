@@ -1,17 +1,19 @@
 public class SnakeLadder {
     static int startPosition=0;
-
+    static int numberOfDiceRoll=0;
     static void display() {
 
         while (startPosition>=0 && startPosition<100) {
 
             int dice=(int) (Math.random()*6)+1;
+            numberOfDiceRoll+=1;
             System.out.println("Dice: "+dice);
 
             int option = (int) (Math.random() * 3) + 1;
             System.out.println("Option: " + option);
 
             if (option == 1) {
+                System.out.println("Position: "+startPosition);
                 continue;
             }
 
@@ -31,6 +33,8 @@ public class SnakeLadder {
                 }
             }
             System.out.println("Position: "+startPosition);
+
         }
+        System.out.println("Number of dice rolls: "+numberOfDiceRoll);
     }
 }
